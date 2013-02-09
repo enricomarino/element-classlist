@@ -1,0 +1,11 @@
+{
+  "name": "element-classlist",
+  "repo": "onirame/element-classlist",
+  "description": "Element class list component",
+  "version": "0.0.1",
+  "keywords": ["DOM", "Element", "classList", "CSS"],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "scripts": ["index.js"]
+}
