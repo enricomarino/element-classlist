@@ -1,4 +1,3 @@
-
 /**
  * element-classlist
  * Element class list component
@@ -8,52 +7,46 @@
  */
 
 /**
- * Expose `ClassList`.
- */
-
-/**
- * ClassList
- * Initialize a new ClassList for `el`.
- *
- * @param {Element} el
+ * classlist
+ * 
+ * @return {Element} this for chaining
  * @api public
  */
 
-function ClassList (el) {
-  this.el = el;
-  this.list = el.classList;
-}
+exports.classlist = function () {
+  this.list = this.el.classList;
+};
 
 /**
- * add
+ * add_class
  * Add class `name` if not already present.
  *
  * @param {String} name class name
- * @return {ClassList} this for chaining
+ * @return {Element} this for chaining
  * @api public
  */
 
-ClassList.prototype.add = function (name) {
+exports.add_class = function (name) {
   this.list.add(name);
   return this;
 };
 
 /**
- * remove
+ * remove_class
  * Remove class `name` when present
  *
  * @param {String} name class to remove
- * @return {ClassList} this for chaining
+ * @return {Element} this for chaining
  * @api public
  */
 
-ClassList.prototype.remove = function (name) {
+exports.remove_class = function (name) {
   this.list.remove(name);
   return this;
 };
 
 /**
- * toggle
+ * toggle_class
  * Toggle class `name`.
  *
  * @param {String} name class to toggle
@@ -61,20 +54,20 @@ ClassList.prototype.remove = function (name) {
  * @api public
  */
 
-ClassList.prototype.toggle = function(name){
+exports.toggle_class = function (name) {
   this.list.toggle(name);
   return this;
 };
 
 /**
- * array
+ * class_array
  * Return an array of classes.
  *
  * @return {Array} array of classes
  * @api public
  */
 
-ClassList.prototype.array = function () {
+exports.class_array = function () {
   var list = this.list;
   var len = list.length;
   var array = new Array(len);
@@ -88,7 +81,7 @@ ClassList.prototype.array = function () {
 };
 
 /**
- * has
+ * has_class|contain_class
  * Check if class `name` is present.
  *
  * @param {String} name class name to check
@@ -97,7 +90,7 @@ ClassList.prototype.array = function () {
  * @api public
  */
 
-ClassList.prototype.has =
-ClassList.prototype.contains = function (name) {
+exports.has_class =
+exports.contains_class = function (name) {
   return this.list.contains(name);
 };
