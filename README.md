@@ -6,6 +6,18 @@ Element class list component
 
     $ component install enricomarino/element-classlist
 
+## API
+
+### Element#add_class(name:String):Element
+
+### Element#remove_class(name:String):Element
+
+### Element#toggle_class(name:String):Element
+
+### Element#has_class(name:String):Element
+
+### Element#classes(name:String):Array<String>
+
 ## License
 
 (The MIT License)
